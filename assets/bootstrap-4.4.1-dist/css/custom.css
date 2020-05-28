@@ -1,3 +1,8 @@
+body{
+max-width:1448px;
+margin:0 auto;
+
+}
 h4{
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,15 +17,19 @@ h4{
     padding:15px;
  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+.page-container{
+    height: 100%!important;
+
+}
 .wrapper{
-    height:700px!important;
+ height:898px!important;  
    
 }
 .aside-nav{
 
     border-right:1px solid #cccccc;
     line-height: 40px;
-    height:100%!important;
+    
     background: #222;
 
 
@@ -43,7 +52,7 @@ width:100%;
 }
 .aside-nav ul li,a{
     color:#ffffff;
-   ;
+   
 }
 .aside-nav ul a{
     color:#ffffff;
@@ -51,7 +60,8 @@ width:100%;
 }
 
 .dash{
-    border:px solid red;  
+
+    height:100%;
  
 
 }
@@ -64,8 +74,14 @@ background: forestgreen;
     .box3{
         background: orange;
         }
+        .table_data{
+            overflow: auto;
+            width:80%;
+            margin:0 auto;
+            height:350px;
+        }
         .table{
-            width:70%;
+            max-width:100%;
             margin:0 auto;
             
         }

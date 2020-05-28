@@ -32,8 +32,7 @@ $total_slots = mysqli_fetch_array($read_all_numrows_total_slots);
 </head>
 
 <body>
-    
-    <div class="container-fluid">
+<div class="container-fluid page-container">
         <div class="row wrapper">
             <div class="col-sm-12" style="background:#1d1d1d;">
                 <nav class="navbar navbar-expand-sm  navbar-dark">
@@ -43,8 +42,8 @@ $total_slots = mysqli_fetch_array($read_all_numrows_total_slots);
 
                     <!-- Toggler/collapsibe Button -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+                    <span class="navbar-toggler-icon"></span>
+                         </button>
 
                     <!-- Navbar links -->
                     <div class="collapse navbar-collapse" id="collapsibleNavbar">
@@ -61,17 +60,14 @@ $total_slots = mysqli_fetch_array($read_all_numrows_total_slots);
                     </div>
                 </nav>
             </div>
-
+            
+            
             <div class="col-lg-2 aside-nav">
                 <div class="container">
-
- 
-
-
-                    <nav class="navbar navbar-expand-md  navbar-dark">
+                <nav class="navbar navbar-expand-md  navbar-dark">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#SideNav">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
                         <br>
                         <div class="collapse navbar-collapse" id="SideNav">
                         <ul class="navbar-nav d-block">
@@ -79,13 +75,15 @@ $total_slots = mysqli_fetch_array($read_all_numrows_total_slots);
                             <li class="nav-item fa fa-dashboard"> <a href="index" >Dashboard</a></li>
                             <li class=" nav-item fa fa-road"> <a href="parking.panel">Parking</a></li>
                             <li class=" nav-item fa fa-id-card"> <a href="#" >Parking Slot</a></li>
+                            <li class=" nav-item fa fa-id-card"> <a href="#" >Settings</a></li>
 
                         </ul>
                         </div>  
                     </nav>
                 </div>
 
-            </div>
+             </div>
+           
 
 
             <div class="col-md-10 dash justify-content-center">
@@ -128,7 +126,7 @@ $total_slots = mysqli_fetch_array($read_all_numrows_total_slots);
 
         </div>
     </div>
-    </div>
+</div>
 </body>
 
 </html>

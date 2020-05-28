@@ -54,8 +54,8 @@ $read_all_parking_entry = $conn->select_all_entry();
                 <div class="container">
                 <nav class="navbar navbar-expand-md  navbar-dark">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#SideNav">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
                         <br>
                         <div class="collapse navbar-collapse" id="SideNav">
                         <ul class="navbar-nav d-block">
@@ -73,7 +73,7 @@ $read_all_parking_entry = $conn->select_all_entry();
             </div>
 
 
-            <div class="col-md-10 dash justify-content-center">
+            <div class="col-lg-10 dash justify-content-center">
                 <div class="container"><br>
                     <h5 style="color:#6f6f6f;">Parking tracker</h5>
                     <hr>
@@ -107,6 +107,7 @@ $read_all_parking_entry = $conn->select_all_entry();
                     <!--table records of Entry-->
                     <br>
               <div class="container">
+            <section class="table_data">
   <table class="table table-bordered">
     <thead>
       <tr>
@@ -133,6 +134,7 @@ $read_all_parking_entry = $conn->select_all_entry();
       ?>
     </tbody>
   </table>
+</section>
 </div>
                     <br><br>
                       <div class="container text-center">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 12, 2020 at 10:45 AM
+-- Generation Time: May 28, 2020 at 07:35 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 5.6.40
 
@@ -40,9 +40,7 @@ CREATE TABLE `tbl_parking_entry` (
 --
 
 INSERT INTO `tbl_parking_entry` (`parking_entry_id`, `vehicle`, `price`, `date`) VALUES
-(1, 'Van', 30, '2020-03-12 08:07:30'),
-(2, 'Car', 25, '2020-03-12 08:07:42'),
-(3, 'Motor', 15, '2020-03-12 08:07:45');
+(1, 'Van', 30, '2020-05-28 17:34:05');
 
 -- --------------------------------------------------------
 
@@ -60,7 +58,7 @@ CREATE TABLE `tbl_parking_slots` (
 --
 
 INSERT INTO `tbl_parking_slots` (`id`, `available_slots`) VALUES
-(1, 22);
+(1, 24);
 
 -- --------------------------------------------------------
 
@@ -138,7 +136,7 @@ ALTER TABLE `tbl_vehicle_type`
 -- AUTO_INCREMENT for table `tbl_parking_entry`
 --
 ALTER TABLE `tbl_parking_entry`
-  MODIFY `parking_entry_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `parking_entry_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbl_parking_slots`
