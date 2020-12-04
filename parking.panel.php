@@ -1,8 +1,35 @@
+<?php
+session_start();
+if(isset($_SESSION['id']) && $_SESSION['id']== true){
+
+
+
+}
+else{
+
+header('location:login.php');
+}
+
+
+?>
+
 <?php 
 include 'includes/Select.class.php';
 $conn = new Select_class();
 $read_all_parking_entry = $conn->select_all_entry();
 
+
+
+
+
+
+
+// ***** ---Start--- select current login user info  ****
+$conn_login_current = new Select_class();
+$user_id =$_SESSION['id'];
+$read_login_current = $conn_login_current->select_login_info($user_id);
+$row = mysqli_fetch_assoc($read_login_current);
+// ***** ---End--- select current login user info  ****
 ?>
 <!Doctype html>
 <html>
@@ -39,10 +66,10 @@ $read_all_parking_entry = $conn->select_all_entry();
 
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item ">
-                                <a class="nav-link" href="#">Admin</a>
+                            <a class="nav-link" href="#"><?php echo $row['username'];?></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">LogOut</a>
+                            <a class="nav-link" href="functions/logout.func.php">LogOut</a>
                             </li>
                         
                         </ul>
@@ -61,7 +88,7 @@ $read_all_parking_entry = $conn->select_all_entry();
                         <ul class="navbar-nav d-block">
 
                             <li class="nav-item fa fa-dashboard"> <a href="index" >Dashboard</a></li>
-                            <li class=" nav-item fa fa-road"> <a href="parking.panel">Parking</a></li>
+                            <li class=" nav-item fa fa-road"> <a href="parking.panel">Parking Entry</a></li>
                             <li class=" nav-item fa fa-id-card"> <a href="#" >Parking Slot</a></li>
                             <li class=" nav-item fa fa-id-card"> <a href="#" >Settings</a></li>
 

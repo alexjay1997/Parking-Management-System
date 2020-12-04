@@ -1,6 +1,5 @@
 body{
-max-width:1448px;
-margin:0 auto;
+
 
 }
 h4{
@@ -92,3 +91,13 @@ background: forestgreen;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-weight: 600;
         }
+
+        .login-form{
+
+        padding:20px;
+        border:1px solid #eee;
+        width:400px;
+       
+
+        }
+     

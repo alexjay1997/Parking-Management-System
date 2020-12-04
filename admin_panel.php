@@ -61,7 +61,7 @@ $row = mysqli_fetch_assoc($read_login_current);
                 <nav class="navbar navbar-expand-sm  navbar-dark">
                     <!-- Brand -->
 
-                    <a class="navbar-brand" href="#" style="font-family:calibri;">Parking Management System</a>
+                    <a class="navbar-brand" href="#" style="font-family:calibri;">Parking Management System | Admin </a>
 
                     <!-- Toggler/collapsibe Button -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -95,9 +95,13 @@ $row = mysqli_fetch_assoc($read_login_current);
                         <div class="collapse navbar-collapse" id="SideNav">
                         <ul class="navbar-nav d-block">
 
-                            <li class="nav-item fa fa-dashboard"> <a href="index" >Dashboard</a></li>
-                            <li class=" nav-item fa fa-road"> <a href="parking.panel">Parking Entry</a></li>
+                            <li class="nav-item fa fa-dashboard"> <a href="index" > Dashboard</a></li>
+                            
                             <li class=" nav-item fa fa-id-card"> <a href="#" >Parking Slot</a></li>
+                            <li class=" nav-item fa fa-id-card"> <a href="#" >Employees</a></li>
+                            <li class=" nav-item fa fa-id-card"> <a href="#" >Reports</a></li>
+                            <li class=" nav-item fa fa-id-card"> <a href="#" >Vehicles</a></li>
+                           
                             <li class=" nav-item fa fa-id-card"> <a href="#" >Settings</a></li>
 
                         </ul>
@@ -111,7 +115,7 @@ $row = mysqli_fetch_assoc($read_login_current);
 
             <div class="col-md-10 dash justify-content-center">
                 <div class="container"><br>
-                    <h5 style="color:#6f6f6f;">Staff Dashboard</h5>
+                    <h5 style="color:#6f6f6f;">Admin Dashboard</h5>
                     <hr>
                     <div class="row d-flex justify-content-center">
                         <div class="col-md-3 box box1">

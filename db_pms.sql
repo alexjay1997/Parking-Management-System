@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 28, 2020 at 07:35 PM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 5.6.40
+-- Generation Time: Dec 04, 2020 at 05:42 PM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.2.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -32,7 +31,7 @@ CREATE TABLE `tbl_parking_entry` (
   `parking_entry_id` int(11) NOT NULL,
   `vehicle` varchar(50) NOT NULL,
   `price` float NOT NULL,
-  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -40,7 +39,10 @@ CREATE TABLE `tbl_parking_entry` (
 --
 
 INSERT INTO `tbl_parking_entry` (`parking_entry_id`, `vehicle`, `price`, `date`) VALUES
-(1, 'Van', 30, '2020-05-28 17:34:05');
+(1, 'Van', 30, '2020-05-28 17:34:05'),
+(2, 'Car', 25, '2020-12-04 14:15:38'),
+(3, 'Motor', 15, '2020-12-04 14:16:36'),
+(4, 'Van', 30, '2020-12-04 16:10:43');
 
 -- --------------------------------------------------------
 
@@ -58,7 +60,7 @@ CREATE TABLE `tbl_parking_slots` (
 --
 
 INSERT INTO `tbl_parking_slots` (`id`, `available_slots`) VALUES
-(1, 24);
+(1, 21);
 
 -- --------------------------------------------------------
 
@@ -68,15 +70,24 @@ INSERT INTO `tbl_parking_slots` (`id`, `available_slots`) VALUES
 
 CREATE TABLE `tbl_users` (
   `id` int(11) NOT NULL,
-  `firstname` int(50) NOT NULL,
-  `lastname` int(50) NOT NULL,
-  `username` int(50) NOT NULL,
-  `password` int(250) NOT NULL,
-  `email` int(50) NOT NULL,
+  `firstname` varchar(50) NOT NULL,
+  `lastname` varchar(50) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(250) NOT NULL,
+  `email` varchar(250) NOT NULL,
   `contact` int(20) NOT NULL,
   `role` varchar(20) NOT NULL,
   `date` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_users`
+--
+
+INSERT INTO `tbl_users` (`id`, `firstname`, `lastname`, `username`, `password`, `email`, `contact`, `role`, `date`) VALUES
+(1, 'admin1', 'admin1', 'admin1', '123', 'admin@test.com', 1234567890, 'admin', '00:00:00'),
+(2, 'admin2', 'admin2', 'admin2', '123456', 'admin2test@g.com', 1232156, 'admin', '23:53:56'),
+(3, 'staff1', 'staff1', 'stf1', '123', 'stf1test@g.com', 1234567, 'staff', '00:01:47');
 
 -- --------------------------------------------------------
 
@@ -88,7 +99,7 @@ CREATE TABLE `tbl_vehicle_type` (
   `vehicle_id` int(11) NOT NULL,
   `vehicle` varchar(50) NOT NULL,
   `price` float NOT NULL,
-  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -136,7 +147,7 @@ ALTER TABLE `tbl_vehicle_type`
 -- AUTO_INCREMENT for table `tbl_parking_entry`
 --
 ALTER TABLE `tbl_parking_entry`
-  MODIFY `parking_entry_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `parking_entry_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_parking_slots`
@@ -148,7 +159,7 @@ ALTER TABLE `tbl_parking_slots`
 -- AUTO_INCREMENT for table `tbl_users`
 --
 ALTER TABLE `tbl_users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tbl_vehicle_type`
