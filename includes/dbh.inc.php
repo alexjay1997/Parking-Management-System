@@ -21,7 +21,7 @@
     {
        // $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
         
-        $this->db_host ="localhost";
+        $this->db_host ="us-cdbr-east-02.cleard";
         $this->db_username ="b749a6c04fe595";
         $this->db_password ="1e7cf907";
         $this->db_name ="heroku_f4bacc0811464cd";
