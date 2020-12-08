@@ -40,7 +40,7 @@ if($query->num_rows>0){
    //     setcookie("pass", $row['password'], time() + (86400 * 30)); 
    // }
 
-    $_SESSION['id_admin']=$row['id'] ;
+    $_SESSION['id']=$row['id'] ;
     header('location:../admin_panel.php');
    //}
 
