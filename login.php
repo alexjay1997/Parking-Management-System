@@ -43,7 +43,9 @@ $total_slots = mysqli_fetch_array($read_all_numrows_total_slots);
             <div class="col-md-12 dash justify-content-center">
                 <div class="container"><br>
                    
-           
+                <?php
+                        echo $total_slots['total_parking_slots'];
+                      ?>
                     <div class="row d-flex justify-content-center">
                    <!--login form start-->
                     <form method="POST" action="functions/login.func.php" class="login-form">
@@ -69,9 +71,7 @@ $total_slots = mysqli_fetch_array($read_all_numrows_total_slots);
                       <footer style="color:#c2c2c2;">
                       &copy; 2020 Parking Management System | Developed By: ALJ
                       </footer>
-                      <?php
-                       // echo $total_slots['total_parking_slots'];
-                      ?>
+                   
                       </div>
                     
                 </div>
