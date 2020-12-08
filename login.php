@@ -120,7 +120,7 @@ $row=mysqli_fetch_array($query);
 
                     <div class="row d-flex justify-content-center">
                    <!--login form start-->
-                    <form method="POST" action="functions/login.func.php" class="login-form">
+                    <form method="POST" action="" class="login-form">
                     <h4>Login</h5><br>
                         <div class="form-group">
                            <i class="fa fa-user"></i> <label for="Username">Username:</label>
