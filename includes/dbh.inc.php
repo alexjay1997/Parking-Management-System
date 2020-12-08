@@ -10,8 +10,9 @@
    // ?>
 
 <?php
+  $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
  class Database{
- 
+  
     private $db_host;
     private $db_username;
     private $db_password;
@@ -19,7 +20,7 @@
   
     protected function db_connection()
     {
-        $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+        
         
         $this->db_host =$url["host"];
         $this->db_username =$url["user"];
