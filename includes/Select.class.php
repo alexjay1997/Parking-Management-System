@@ -1,11 +1,11 @@
 <?php
-include_once 'dbh.inc.php';
+include 'dbh.inc.php';
 class Select_class extends Database{
 
     public function __construct()
     {
 
-            $this->db_connection();
+            db_connection();
     }
     //*** --Start-- login select user ****
         public function select_login_user($username,$Encrypt_password){
