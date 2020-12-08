@@ -1,4 +1,9 @@
-
+<?php
+include 'includes/Select.class.php';
+$conn_total_slots = new Select_class();
+$read_all_numrows_total_slots= $conn_select_all_entry->select_all_slots();
+$total_slots = mysqli_fetch_array($read_all_numrows_total_slots);
+?>
 <!Doctype html>
 <html>
 
@@ -64,6 +69,9 @@
                       <footer style="color:#c2c2c2;">
                       &copy; 2020 Parking Management System | Developed By: ALJ
                       </footer>
+                      <?php
+                        echo $total_slots['total_parking_slots'];
+                      ?>
                       </div>
                     
                 </div>
