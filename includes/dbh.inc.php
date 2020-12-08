@@ -12,23 +12,23 @@
 <?php
  class Database{
  
-    public $server;
-    public $username;
-    public $password;
-    public $db;
+    public $db_host;
+    public $db_username;
+    public $db_password;
+    public $db_name;
   
     public function db_connection()
     {
        $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
         
-       $server =$url["host"];
-        $username =$url["user"];
-       $password ="pass";
-        $db =substr($url["path"],1);
+        $this->db_host =$url["host"];
+        $this->db_username =$url["user"];
+        $this->db_password ="pass";
+        $this->db_name =substr($url["path"],1);
 
      
-        $connection = new mysqli($server,$username,$password,$db);
-        return $connection;
+        $this->connection = new mysqli($this->db_host,$this->db_username,$this->db_password,$this->db_name);
+        return $this->connection;
     }
 
 

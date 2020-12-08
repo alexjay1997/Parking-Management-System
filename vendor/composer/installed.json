@@ -1,0 +1,59 @@
+{
+    "packages": [
+        {
+            "name": "heroku/heroku-buildpack-php",
+            "version": "v186",
+            "version_normalized": "186.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/heroku/heroku-buildpack-php.git",
+                "reference": "14aa5ec5a58d4051b39d6cfc8e7b49f707892f81"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/14aa5ec5a58d4051b39d6cfc8e7b49f707892f81",
+                "reference": "14aa5ec5a58d4051b39d6cfc8e7b49f707892f81",
+                "shasum": ""
+            },
+            "time": "2020-12-07T19:36:04+00:00",
+            "bin": [
+                "bin/heroku-hhvm-apache2",
+                "bin/heroku-hhvm-nginx",
+                "bin/heroku-php-apache2",
+                "bin/heroku-php-nginx"
+            ],
+            "type": "library",
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Zuelke",
+                    "email": "dz@heroku.com"
+                }
+            ],
+            "description": "Toolkit for starting a PHP application locally, with or without foreman, using the same config for PHP/HHVM and Apache2/Nginx as on Heroku",
+            "homepage": "https://github.com/heroku/heroku-buildpack-php",
+            "keywords": [
+                "apache",
+                "apache2",
+                "foreman",
+                "heroku",
+                "hhvm",
+                "nginx",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/heroku/heroku-buildpack-php/issues",
+                "source": "https://github.com/heroku/heroku-buildpack-php/tree/v186"
+            },
+            "install-path": "../heroku/heroku-buildpack-php"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": [
+        "heroku/heroku-buildpack-php"
+    ]
+}
