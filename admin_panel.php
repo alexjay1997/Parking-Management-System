@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['id']) && $_SESSION['id']== true){
+if(isset($_SESSION['id_admin']) && $_SESSION['id_admin']== true){
 
 
 
@@ -13,8 +13,6 @@ header('location:login.php');
 
 ?>
 <?php
-
-
 // **** ---Start---  select_numrows parking entry ***
 include 'includes/Select.class.php';
 $conn_select_all_entry = new Select_class();
@@ -33,7 +31,7 @@ $total_slots = mysqli_fetch_array($read_all_numrows_total_slots);
 // **** ---End--- select_numrows parking entry ***
 // ***** ---Start--- select current login user info  ****
 $conn_login_current = new Select_class();
-$user_id =$_SESSION['id'];
+$user_id =$_SESSION['id_admin'];
 $read_login_current = $conn_login_current->select_login_info($user_id);
 $row = mysqli_fetch_assoc($read_login_current);
 // ***** ---End--- select current login user info  ****
@@ -95,14 +93,14 @@ $row = mysqli_fetch_assoc($read_login_current);
                         <div class="collapse navbar-collapse" id="SideNav">
                         <ul class="navbar-nav d-block">
 
-                            <li class="nav-item fa fa-dashboard"> <a href="index" > Dashboard</a></li>
+                            <li class="nav-item fa fa-dashboard"> <a href="admin_panel.php" > Dashboard</a></li>
                             
-                            <li class=" nav-item fa fa-id-card"> <a href="#" >Parking Slot</a></li>
-                            <li class=" nav-item fa fa-id-card"> <a href="#" >Employees</a></li>
-                            <li class=" nav-item fa fa-id-card"> <a href="#" >Reports</a></li>
-                            <li class=" nav-item fa fa-id-card"> <a href="#" >Vehicles</a></li>
+                            <li class=" nav-item fa fa-id-card"> <a href="parking_slot.php" >Parking Slot</a></li>
+                            <li class=" nav-item fa fa-id-card"> <a href="employees.php" >Employees</a></li>
+                            <li class=" nav-item fa fa-id-card"> <a href="reports.php" >Reports</a></li>
+                            <li class=" nav-item fa fa-id-card"> <a href="vehicles.php" >Vehicles</a></li>
                            
-                            <li class=" nav-item fa fa-id-card"> <a href="#" >Settings</a></li>
+                            <li class=" nav-item fa fa-id-card"> <a href="admin_settings.php" >Settings</a></li>
 
                         </ul>
                         </div>  
@@ -133,7 +131,7 @@ $row = mysqli_fetch_assoc($read_login_current);
                         </div>
                         <div class="col-md-3 box box3">
                             <h3 class="fas fa-car"></h3>
-                            &nbsp;<label><?php echo 25;?></label>
+                            &nbsp;<label><?php echo $total_slots['total_parking_slots'];?></label>
                             <h4>Total Parking Slots</h4>
 
                         </div>

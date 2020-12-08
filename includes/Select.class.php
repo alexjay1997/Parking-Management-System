@@ -54,7 +54,7 @@ public function select_number_entry(){
 //******* select number of entry *********
 public function select_all_slots(){
 
-    $query_all_total_slots="Select available_slots from tbl_parking_slots";
+    $query_all_total_slots="Select * from tbl_parking_slots";
     $result=mysqli_query($this->connection,$query_all_total_slots);
     return $result;
 

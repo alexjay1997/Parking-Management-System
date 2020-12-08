@@ -13,8 +13,6 @@ header('location:login.php');
 
 ?>
 <?php
-
-
 // **** ---Start---  select_numrows parking entry ***
 include 'includes/Select.class.php';
 $conn_select_all_entry = new Select_class();
@@ -61,7 +59,7 @@ $row = mysqli_fetch_assoc($read_login_current);
                 <nav class="navbar navbar-expand-sm  navbar-dark">
                     <!-- Brand -->
 
-                    <a class="navbar-brand" href="#" style="font-family:calibri;">Parking Management System</a>
+                    <a class="navbar-brand" href="#" style="font-family:calibri;">Parking Management System | Staff </a>
 
                     <!-- Toggler/collapsibe Button -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -95,12 +93,12 @@ $row = mysqli_fetch_assoc($read_login_current);
                         <div class="collapse navbar-collapse" id="SideNav">
                         <ul class="navbar-nav d-block">
 
-                            <li class="nav-item fa fa-dashboard"> <a href="index" >Dashboard</a></li>
-                            <li class=" nav-item fa fa-road"> <a href="parking.panel">Parking Entry</a></li>
-                            <li class=" nav-item fa fa-id-card"> <a href="slots_parking.php" >Parking Slot</a></li>
-                            <li class=" nav-item fa fa-id-card"> <a href="#" >Settings</a></li>
+<li class="nav-item fa fa-dashboard"> <a href="index" >Dashboard</a></li>
+<li class=" nav-item fa fa-road"> <a href="parking.panel">Parking Entry</a></li>
+<li class=" nav-item fa fa-id-card"> <a href="#" >Parking Slot</a></li>
+<li class=" nav-item fa fa-id-card"> <a href="#" >Settings</a></li>
 
-                        </ul>
+</ul>
                         </div>  
                     </nav>
                 </div>
@@ -111,29 +109,23 @@ $row = mysqli_fetch_assoc($read_login_current);
 
             <div class="col-md-10 dash justify-content-center">
                 <div class="container"><br>
-                    <h5 style="color:#6f6f6f;">Staff Dashboard</h5>
+                    <h5 style="color:#6f6f6f;">Update Available Parking Slots</h5>
                     <hr>
                     <div class="row d-flex justify-content-center">
-                        <div class="col-md-3 box box1">
+                        <div class="col-md-6 ">
 
-                            <h3 class="fas fa-car"></h3>
-                            &nbsp;<label><?php echo $num_rows;?></label>
-                            <h4>Total Entries</h4>
+                        <form method="POST" action="functions/update_available_slot.php" class="parking-slot-form">
+                    <h4>Add Available Parking Slots</h5><br>
+                        <div class="form-group">
+                           <i class="fa fa-road"></i> <label for="Username">Total Available Parking Slots:</label>
+                            <input type="number" class="form-control" id="parking_slot" name="inp_update_available_slot" value="<?php echo $total_slots['available_slots'];?>">
+                        </div>
+                    
+                        <button type="submit" class="btn btn-primary" name="btn_update_available_slot">Update</button>
+                        </form> 
 
                         </div>
-                        <div class="col-md-3 box box2">
-                            <h3 class="fas fa-car"></h3>
-                            &nbsp; <label><?php echo $total_slots['available_slots'];?></label>
-                            <h4>Total Vacant Slots</h4>
-
-                        </div>
-                        <div class="col-md-3 box box3">
-                            <h3 class="fas fa-car"></h3>
-                            &nbsp;<label><?php echo $total_slots['total_parking_slots'];?></label>
-                            <h4>Total Parking Slots</h4>
-
-                        </div>
-
+                       
                     </div>
                     <br><br>
                       <div class="container text-center">

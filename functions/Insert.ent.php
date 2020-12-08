@@ -5,8 +5,8 @@
 
 if(isset($_POST['Submit_btn'])){
 
-    //--- Start--- select Lahat ng  parking entries  
-
+    //--- Start--- select all of parking entries  
+   
   
     //--- end---
 
@@ -14,12 +14,51 @@ if(isset($_POST['Submit_btn'])){
     $conn_select_all_slots= new Select_class();
     $num_rows_slots = $conn_select_all_slots->select_all_slots();
     $num_rows_all_slots = mysqli_fetch_array($num_rows_slots);
-
+    $available_slots=$num_rows_all_slots['available_slots'];
     // -- End -- 
     
- // -- Start  variable sa pag insert  at function --
+ 
+ // -- Start  variable for insert and function --
+
     $vehicle =$_POST['vehicle'];
     $price = $_POST['price'];
+
+
+ 
+
+   
+    // -- check first if price is same with the system or hack if it is hack or change in inspect element then alert error message //
+    if($vehicle == "Van" && $price !="30.00" ){
+
+        echo "<script>alert('error price!');</script>";
+        echo "<script>window.location.href='../parking.panel';</script>";
+      
+    }
+    
+    else if($vehicle == "Car" && $price !="25.00" ){
+        echo "<script>alert('error price!');</script>";
+        echo "<script>window.location.href='../parking.panel';</script>";
+       
+    }
+    
+    else if($vehicle == "Motor" && $price !="15.00" ){
+    
+        echo "<script>alert('error price!');</script>";
+        echo "<script>window.location.href='../parking.panel';</script>";
+       
+    }
+    
+ 
+   
+ 
+      else if($available_slots ==0){
+    
+            echo "sorry no more available parking area!";
+        }
+
+// do below if price is not hack or change it will insert the type of vehicle and price //
+else{
+   
     $conn_add_entry =  new Insert_class ();
     $insert_entry =$conn_add_entry->insert_parking_entry($vehicle,$price);
     // End
@@ -33,4 +72,7 @@ if(isset($_POST['Submit_btn'])){
     
     header('location:../parking.panel.php');
     }
+ 
+
+}
 ?>

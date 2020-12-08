@@ -11,9 +11,10 @@ $password = mysqli_real_escape_string($conn_select_user_login->connection,$_POST
 $Encrypt_password = $password;
 
 $userLogin= $conn_select_user_login->select_login_user($username,$Encrypt_password);
-if($userLogin>0){
+$row =mysqli_fetch_array($userLogin);
+if($userLogin->num_rows>0){
 
-    $row=mysqli_fetch_array($userLogin);
+    
     if($row['role']=="admin"){
    // if (isset($_POST['remember'])){
         //set up cookie
@@ -21,7 +22,7 @@ if($userLogin>0){
    //     setcookie("pass", $row['password'], time() + (86400 * 30)); 
    // }
 
-    $_SESSION['id']=$row['id'];
+    $_SESSION['id_admin']=$row['id'] ;
     header('location:../admin_panel.php');
    }
 
@@ -29,14 +30,14 @@ if($userLogin>0){
 
 
     
-    $_SESSION['id']=$row['id'];
+    $_SESSION['id_staff']=$row['id'];
 
     header('location:../index.php');
    }
 }
 else{
 
-    header('location:../login.php');
+  header('location:../login.php');
 }
 
 }
