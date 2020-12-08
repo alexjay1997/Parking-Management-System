@@ -10,9 +10,8 @@
    // ?>
 
 <?php
-  $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
  class Database{
-  
+ 
     private $db_host;
     private $db_username;
     private $db_password;
@@ -20,12 +19,12 @@
   
     protected function db_connection()
     {
+        $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
         
-        
-        $this->db_host =$url["host"];
-        $this->db_username =$url["user"];
-        $this->db_password ="pass";
-        $this->db_name =substr($url["path"],1);
+        $this->db_host =$url["us-cdbr-east-02.cleard"];
+        $this->db_username =$url["b749a6c04fe595"];
+        $this->db_password ="1e7cf907";
+        $this->db_name =substr($url["heroku_f4bacc0811464cd"],1);
 
      
         $this->connection = new mysqli($this->db_host,$this->db_username,$this->db_password,$this->db_name);
