@@ -9,10 +9,10 @@
 <?php
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-$server = $url["us-cdbr-east-02.cleard"];
-$username = $url["b749a6c04fe595"];
-$password = $url["1e7cf907"];
-$db = substr($url["heroku_f4bacc0811464cd"], 1);
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
 
 $conn = new mysqli($server, $username, $password, $db);
 
