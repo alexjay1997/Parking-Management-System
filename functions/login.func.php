@@ -18,11 +18,11 @@ session_start();
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
  
  $server = $url["host"];
- $username = $url["user"];
- $password = $url["pass"];
+ $dbusername = $url["user"];
+ $dbpassword = $url["pass"];
  $db = substr($url["path"], 1);
  
- $conn = new mysqli($server, $username, $password, $db);
+ $conn = new mysqli($server, $dbusername, $dbpassword, $db);
 
 $username =mysqli_real_escape_string($conn_select_user_login->connection,$_POST['username']);
 $password = mysqli_real_escape_string($conn_select_user_login->connection,$_POST['password']);
