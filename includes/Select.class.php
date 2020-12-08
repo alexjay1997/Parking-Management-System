@@ -10,13 +10,13 @@ class Select_class extends Database{
     //*** --Start-- login select user ****
         public function select_login_user($username,$Encrypt_password){
             $query_select_login = "Select * from tbl_users where username='$username' && password='$Encrypt_password' ";
-            $result=mysqli_query($this->connection,$query_select_login);
+            $result=mysqli_query($connection,$query_select_login);
             return $result;
         }
 
         public function select_login_info($user_id){
             $query_select_login = "Select * from tbl_users where id='$user_id'";
-            $result=mysqli_query($this->connection,$query_select_login);
+            $result=mysqli_query($connection,$query_select_login);
             return $result;
         }
 
@@ -25,7 +25,7 @@ class Select_class extends Database{
     public function select_all_entry(){
 
         $query_all_entry="Select * from tbl_parking_entry";
-        $result=mysqli_query($this->connection,$query_all_entry);
+        $result=mysqli_query($connection,$query_all_entry);
         return $result;
 
     }
@@ -33,7 +33,7 @@ class Select_class extends Database{
         public function select_vehicle(){
 
         $query_select_vehicle = "Select * from tbl_vehicle_type";
-        $result =mysqli_query($this->connection,$query_select_vehicle);
+        $result =mysqli_query($connection,$query_select_vehicle);
         return $result;   
     }
 // ******* --End-- select vehicle from tbl_vehicle_type *******
@@ -43,7 +43,7 @@ class Select_class extends Database{
 public function select_number_entry(){
 
     $query_all_entry="Select * from tbl_parking_entry";
-    $result=mysqli_query($this->connection,$query_all_entry);
+    $result=mysqli_query($connection,$query_all_entry);
     return $result;
 
 }
@@ -55,7 +55,7 @@ public function select_number_entry(){
 public function select_all_slots(){
 
     $query_all_total_slots="Select * from tbl_parking_slots";
-    $result=mysqli_query($this->connection,$query_all_total_slots);
+    $result=mysqli_query($connection,$query_all_total_slots);
     return $result;
 
 }
