@@ -1,25 +1,25 @@
 <?php
-include 'includes/Select.class.php';
-$conn_total_slots = new Select_class();
-$read_all_numrows_total_slots= $conn_select_all_entry->select_all_slots();
-$total_slots = mysqli_fetch_array($read_all_numrows_total_slots);
+//include 'includes/Select.class.php';
+//$conn_total_slots = new Select_class();
+//$read_all_numrows_total_slots= $conn_select_all_entry->select_all_slots();
+//$total_slots = mysqli_fetch_array($read_all_numrows_total_slots);
 ?>
 
 
 <?php
-//$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-//$server = $url["host"];
-//$username = $url["user"];
-///$password = $url["pass"];
-//$db = substr($url["path"], 1);
+$server = $url["us-cdbr-east-02.cleard"];
+$username = $url["b749a6c04fe595"];
+$password = $url["1e7cf907"];
+$db = substr($url["heroku_f4bacc0811464cd"], 1);
 
-//$conn = new mysqli($server, $username, $password, $db);
+$conn = new mysqli($server, $username, $password, $db);
 
 
 
-//$query=mysqli_query($conn,"select * from tbl_users where id=1");
-//$row=mysqli_fetch_array($query);
+$query=mysqli_query($conn,"select * from tbl_users where id=1");
+$row=mysqli_fetch_array($query);
 ?>
 <!Doctype html>
 <html>
@@ -61,6 +61,12 @@ $total_slots = mysqli_fetch_array($read_all_numrows_total_slots);
                 <div class="container"><br>
                    
            
+
+                <?php
+                
+                echo $row['username'];
+                ?>
+
                     <div class="row d-flex justify-content-center">
                    <!--login form start-->
                     <form method="POST" action="functions/login.func.php" class="login-form">
