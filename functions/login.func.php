@@ -1,6 +1,22 @@
 <?php
-  include '../includes/Select.class.php';
-  $conn_select_user_login =new Select_class();
+ // include '../includes/Select.class.php';
+ // $conn_select_user_login =new Select_class();
+ //<?php
+ $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+ 
+ $server = $url["host"];
+ $username = $url["user"];
+ $password = $url["pass"];
+ $db = substr($url["path"], 1);
+ 
+ $conn = new mysqli($server, $username, $password, $db);
+ 
+ 
+ 
+ 
+ $row=mysqli_fetch_array($query);
+
+
 if(isset($_POST['btn_login'])){
 
   
@@ -10,9 +26,9 @@ $username =mysqli_real_escape_string($conn_select_user_login->connection,$_POST[
 $password = mysqli_real_escape_string($conn_select_user_login->connection,$_POST['password']);
 $Encrypt_password = $password;
 
-$userLogin= $conn_select_user_login->select_login_user($username,$Encrypt_password);
-$row =mysqli_fetch_array($userLogin);
-if($userLogin->num_rows>0){
+ $query=mysqli_query($conn,"select * from tbl_users where id=1");
+ $row =mysqli_fetch_array($query);
+if($row->num_rows>0){
 
     
     if($row['role']=="admin"){
