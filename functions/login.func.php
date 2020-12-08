@@ -26,7 +26,7 @@ $username =mysqli_real_escape_string($conn_select_user_login->connection,$_POST[
 $password = mysqli_real_escape_string($conn_select_user_login->connection,$_POST['password']);
 $Encrypt_password = $password;
 
- $query=mysqli_query($conn,"select * from tbl_users where id=1");
+ $query=mysqli_query($conn,"select * from tbl_users where username='$username' && password='$Encrypt_password'");
  $row =mysqli_fetch_array($query);
 if($row->num_rows>0){
 
