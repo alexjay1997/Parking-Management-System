@@ -61,7 +61,7 @@ $total_slots = mysqli_fetch_array($read_all_numrows_total_slots);
                 <div class="container"><br>
                    
                 <?php
-                        echo $row['username'];
+                        echo $total_slots['total_parking_slots'];
                       ?>
                     <div class="row d-flex justify-content-center">
                    <!--login form start-->
