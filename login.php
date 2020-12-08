@@ -70,7 +70,7 @@ $total_slots = mysqli_fetch_array($read_all_numrows_total_slots);
                       &copy; 2020 Parking Management System | Developed By: ALJ
                       </footer>
                       <?php
-                        echo $total_slots['total_parking_slots'];
+                       // echo $total_slots['total_parking_slots'];
                       ?>
                       </div>
                     
