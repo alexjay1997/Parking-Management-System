@@ -14,7 +14,7 @@
  
  
  
- $row=mysqli_fetch_array($query);
+ //$row=mysqli_fetch_array($query);
 
 
 if(isset($_POST['btn_login'])){
@@ -27,11 +27,11 @@ $password = mysqli_real_escape_string($conn_select_user_login->connection,$_POST
 $Encrypt_password = $password;
 
  $query=mysqli_query($conn,"select * from tbl_users where username='$username' && password='$Encrypt_password'");
- $row =mysqli_fetch_array($query);
-if($row->num_rows>0){
 
+if($query->num_rows>0){
+  $row =mysqli_fetch_array($query);
     
-    if($row['role']=="admin"){
+    //if($row['role']=="admin"){
    // if (isset($_POST['remember'])){
         //set up cookie
     //    setcookie("user", $row['username'], time() + (86400 * 30)); 
@@ -40,16 +40,16 @@ if($row->num_rows>0){
 
     $_SESSION['id_admin']=$row['id'] ;
     header('location:../admin_panel.php');
-   }
+   //}
 
-   else if($row['role']=="staff"){
+   //else if($row['role']=="staff"){
 
 
     
-    $_SESSION['id_staff']=$row['id'];
+   // $_SESSION['id_staff']=$row['id'];
 
-    header('location:../index.php');
-   }
+   // header('location:../index.php');
+   //}
 }
 else{
 
