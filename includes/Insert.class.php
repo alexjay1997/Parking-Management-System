@@ -1,5 +1,5 @@
 <?php
-include 'dbh.inc.php';
+include_once 'dbh.inc.php';
 class Insert_class extends Database{
 
     public function __construct()
@@ -29,9 +29,9 @@ class Insert_class extends Database{
 
     }
 
-    public function add_ParkingEntry($vehicles,$prices){
+    public function addEntryParking($vehicles,$prices){
 
-        $insert_parking_entry = "INSERT INTO tbl_parking_entry(vehicle, price) values ('".$vehicles."','".$prices."')";
+        $insert_parking_entry = "INSERT INTO tbl_parking_entry(vehicle, price) values ('$vehicles','$prices')";
         $result=mysqli_query($this->connection,$insert_parking_entry);
         return $result;
 

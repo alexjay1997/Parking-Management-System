@@ -1,10 +1,10 @@
 <?php
-include_once '../includes/Insert.class.php';
-include_once '../includes/Select.class.php';
-include_once '../includes/update.slots.php';
 
 if(isset($_POST['btn-add-entry'])){
-
+    include_once '../includes/Insert.class.php';
+    include_once '../includes/Select.class.php';
+    include_once '../includes/update.slots.php';
+    
     
     //--- Start--- select all of parking entries  
    
@@ -13,6 +13,7 @@ if(isset($_POST['btn-add-entry'])){
 
     // Select all Slots parking available 
     $conn_select_all_slots= new Select_class();
+
     $num_rows_slots = $conn_select_all_slots->select_all_slots();
     $num_rows_all_slots = mysqli_fetch_array($num_rows_slots);
     $available_slots=$num_rows_all_slots['available_slots'];
@@ -61,13 +62,15 @@ if(isset($_POST['btn-add-entry'])){
 else{
    
     $conn_add_entry =  new Insert_class();
-    $insert_entry = $conn_add_entry->ad_ParkingEntry($vehicles,$prices);
+
+    $insert_entry = $conn_add_entry->addEntryParking($vehicles,$prices);
     // End
 
    
     // --  Start -- slots available  bawasan ang available slot na row ng 1 kada insert ng bagong entry  
     $slots = $num_rows_all_slots['available_slots'] - 1;
     $conn_update_slots = new Update_class();
+    
     $total_slots = $conn_update_slots->update_slots($slots);
     // --- End ---
     
