@@ -1,7 +1,7 @@
 <?php
- include_once '../includes/Insert.class.php';
- include_once '../includes/Select.class.php';
- include_once '../includes/update.slots.php';
+ include '../includes/Insert.class.php';
+ include '../includes/Select.class.php';
+ include '../includes/update.slots.php';
 
 if(isset($_POST['Submit_btn'])){
 

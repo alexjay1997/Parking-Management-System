@@ -121,7 +121,7 @@ $row = mysqli_fetch_assoc($read_login_current);
                             <input type="number" class="form-control" id="parking_slot" name="inp_update_available_slot" value="<?php echo $total_slots['available_slots'];?>">
                         </div>
                     
-                        <button type="submit" class="btn btn-primary" name="btn_update_available_slot">Update</button>
+                        <input type="submit" class="btn btn-primary" name="btn_update_available_slot" value="Update">
                         </form> 
 
                         </div>
