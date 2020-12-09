@@ -1,7 +1,7 @@
 <?php
- include_once '../includes/Insert.class.php';
- include_once '../includes/Select.class.php';
- include_once '../includes/update.slots.php';
+ require_once '../includes/Insert.class.php';
+ require_once '../includes/Select.class.php';
+ require_once '../includes/update.slots.php';
 
 if(isset($_POST['Submit_btn'])){
 
@@ -59,7 +59,7 @@ if(isset($_POST['Submit_btn'])){
 // do below if price is not hack or change it will insert the type of vehicle and price //
 else{
    
-    $conn_add_entry =  new Insert_class ();
+    $conn_add_entry =  new Insert_class();
     $insert_entry =$conn_add_entry->insert_parking_entry($vehicle,$price);
     // End
 
