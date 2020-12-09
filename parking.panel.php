@@ -53,7 +53,7 @@ $sql = "INSERT into tbl_parking_entry (vehicle, price) values ('$vehicle', '$pri
 $result = mysqli_query($conn,$sql);
 
 if($result ==true){
-echo "success insert"
+echo "success insert";
 }
 else{
 
@@ -118,9 +118,9 @@ else{
                         <div class="collapse navbar-collapse" id="SideNav">
                         <ul class="navbar-nav d-block">
 
-                            <li class="nav-item fa fa-dashboard"> <a href="index.php" >Dashboard</a></li>
-                            <li class=" nav-item fa fa-road"> <a href="parking.panel.php">Parking Entry</a></li>
-                            <li class=" nav-item fa fa-id-card"> <a href="slots_parking.php" >Parking Slot</a></li>
+                            <li class="nav-item fa fa-dashboard"> <a href="index" >Dashboard</a></li>
+                            <li class=" nav-item fa fa-road"> <a href="parking.panel">Parking Entry</a></li>
+                            <li class=" nav-item fa fa-id-card"> <a href="slots_parking" >Parking Slot</a></li>
                             <li class=" nav-item fa fa-id-card"> <a href="#" >Settings</a></li>
 
                         </ul>
@@ -139,7 +139,7 @@ else{
                     <div class="row d-flex justify-content-center">
                    
                         <!--form -->
-                        <form method="post" action="parking.panel.php" class="text-center">
+                        <form method="post" action="parking.panel" class="text-center">
                      
 
 
