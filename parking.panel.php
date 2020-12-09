@@ -115,8 +115,8 @@ else{
                         <div class="collapse navbar-collapse" id="SideNav">
                         <ul class="navbar-nav d-block">
 
-                            <li class="nav-item fa fa-dashboard"> <a href="index" >Dashboard</a></li>
-                            <li class=" nav-item fa fa-road"> <a href="parking.panel">Parking Entry</a></li>
+                            <li class="nav-item fa fa-dashboard"> <a href="index.php" >Dashboard</a></li>
+                            <li class=" nav-item fa fa-road"> <a href="parking.panel.php">Parking Entry</a></li>
                             <li class=" nav-item fa fa-id-card"> <a href="slots_parking.php" >Parking Slot</a></li>
                             <li class=" nav-item fa fa-id-card"> <a href="#" >Settings</a></li>
 
