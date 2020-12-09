@@ -1,5 +1,5 @@
 <?php
-include '../includes/insert.class.php';
+include_once '.././includes/insert.class.php';
 
 $conn_update_parking_slots = new Insert_class();
 
@@ -10,7 +10,7 @@ $total_slots = mysqli_real_escape_string($conn_update_parking_slots->connection,
 $update_total_parking_slot = $conn_update_parking_slots->update_parking_slots($total_slots);
 
 //if($update_total_parking_slot){
-header('location:../admin_panel.php');
+header('location:../parking_slot.php');
 //}
 
 //else{
