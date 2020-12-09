@@ -31,7 +31,7 @@ $total_slots = mysqli_fetch_array($read_all_numrows_total_slots);
 // **** ---End--- select_numrows parking entry ***
 // ***** ---Start--- select current login user info  ****
 $conn_login_current = new Select_class();
-$user_id =$_SESSION['id'];
+$user_id =$_SESSION['id_admin'];
 $read_login_current = $conn_login_current->select_login_info($user_id);
 $row = mysqli_fetch_assoc($read_login_current);
 // ***** ---End--- select current login user info  ****
