@@ -109,7 +109,7 @@ $row = mysqli_fetch_assoc($read_login_current);
                     <div class="row d-flex justify-content-center">
                    
                         <!--form -->
-                        <form method="post" action="functions/add_new_entry_parking.func.php" class="text-center">
+                        <form method="POST" action="functions/add_entry.func.php" class="text-center">
                      
 
 
