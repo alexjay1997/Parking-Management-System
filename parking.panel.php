@@ -43,8 +43,8 @@ $conn = new mysqli($hostname, $dbusername, $dbpassword, $database);
 
 $vehicle =$_POST['vehicle'];
     $price = $_POST['price'];
-$sql = ($conn,"INSERT INTO `tbl_parking_entry` (vehicle, price) VALUES('$vehicle','$price')");
-$insert =mysqli_query($sql);
+$sql = "INSERT INTO `tbl_parking_entry` (vehicle, price) VALUES('$vehicle','$price')";
+$insert =mysqli_query($sql,$conn);
 if($insert==true){
 header('location:parking.panel.php');
 }
