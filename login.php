@@ -18,8 +18,8 @@ if(isset($_POST['btn_login'])){
      
      $conn = new mysqli($server, $dbusername, $dbpassword, $db);
     
-    $username =mysqli_real_escape_string($conn_select_user_login->connection,$_POST['username']);
-    $password = mysqli_real_escape_string($conn_select_user_login->connection,$_POST['password']);
+    $username =mysqli_real_escape_string($_POST['username']);
+    $password = mysqli_real_escape_string($_POST['password']);
     $Encrypt_password = $password;
     
      $query=mysqli_query($conn,"select * from tbl_users where username='$username' && password='$Encrypt_password'");
@@ -120,7 +120,7 @@ $row=mysqli_fetch_array($query);
 
                     <div class="row d-flex justify-content-center">
                    <!--login form start-->
-                    <form method="POST" action="login.php" class="login-form">
+                    <form method="POST" action="" class="login-form">
                     <h4>Login</h5><br>
                         <div class="form-group">
                            <i class="fa fa-user"></i> <label for="Username">Username:</label>
