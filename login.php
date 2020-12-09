@@ -1,28 +1,3 @@
-<?php
-//include 'includes/Select.class.php';
-//$conn_total_slots = new Select_class();
-//$read_all_numrows_total_slots= $conn_select_all_entry->select_all_slots();
-//$total_slots = mysqli_fetch_array($read_all_numrows_total_slots);
-
-
-?>
-
-
-<?php
-$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-
-$server = $url["host"];
-$username = $url["user"];
-$password = $url["pass"];
-$db = substr($url["path"], 1);
-
-$conn = new mysqli($server, $username, $password, $db);
-
-
-
-$query=mysqli_query($conn,"select * from tbl_users where id=1");
-$row=mysqli_fetch_array($query);
-?>
 <!Doctype html>
 <html>
 
