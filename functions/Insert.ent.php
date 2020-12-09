@@ -31,20 +31,20 @@ if(isset($_POST['Submit_btn'])){
     if($vehicle == "Van" && $price !="30.00" ){
 
         echo "<script>alert('error price!');</script>";
-        echo "<script>window.location.href='../parking.panel';</script>";
+        echo "<script>window.location.href='../parking.panel.php';</script>";
       
     }
     
     else if($vehicle == "Car" && $price !="25.00" ){
         echo "<script>alert('error price!');</script>";
-        echo "<script>window.location.href='../parking.panel';</script>";
+        echo "<script>window.location.href='../parking.panel.php';</script>";
        
     }
     
     else if($vehicle == "Motor" && $price !="15.00" ){
     
         echo "<script>alert('error price!');</script>";
-        echo "<script>window.location.href='../parking.panel';</script>";
+        echo "<script>window.location.href='../parking.panel.php';</script>";
        
     }
     
@@ -60,7 +60,7 @@ if(isset($_POST['Submit_btn'])){
 else{
    
     $conn_add_entry =  new Insert_class();
-    $insert_entry =$conn_add_entry->insert_parking_entry($vehicle,$price);
+    $insert_entry = $conn_add_entry->insert_parking_entry($vehicle,$price);
     // End
 
    

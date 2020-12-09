@@ -31,37 +31,7 @@ $read_login_current = $conn_login_current->select_login_info($user_id);
 $row = mysqli_fetch_assoc($read_login_current);
 // ***** ---End--- select current login user info  ****
 ?>
-<?php
 
-  
-$hostname = 'us-cdbr-east-02.cleardb.com';
-$dbusername = 'b749a6c04fe595';
-$dbpassword = '1e7cf907';
-$database = 'heroku_f4bacc0811464cd';
-
-
-$conn = new mysqli($hostname, $dbusername, $dbpassword, $database);
-
-
-if(isset($_POST['Submit_btn'])){
-
-
-$vehicle =$_POST['vehicle'];
-$price = $_POST['price'];
-
-$sql = "INSERT into tbl_parking_entry (vehicle, price) values ('$vehicle', '$price')";
-$result = mysqli_query($conn,$sql);
-
-if($result ==true){
-echo "success insert";
-}
-else{
-
-  echo "error insert!";
-}
-}
-
-?>
 <!Doctype html>
 <html>
 
@@ -139,7 +109,7 @@ else{
                     <div class="row d-flex justify-content-center">
                    
                         <!--form -->
-                        <form method="post" action="parking.panel" class="text-center">
+                        <form method="post" action="functions/Insert.ent.php" class="text-center">
                      
 
 

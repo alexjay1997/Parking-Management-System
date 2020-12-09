@@ -9,7 +9,7 @@ class Insert_class extends Database{
     }
     public function insert_parking_entry($vehicle, $price){
 
-        $query_insert_parking_entry="Insert into tbl_parking_entry(vehicle, price) values ('$vehicle','$price')";
+        $query_insert_parking_entry = "INSERT into tbl_parking_entry (vehicle, price) values ('$vehicle','$price')";
         $result=mysqli_query($this->connection,$query_insert_parking_entry);
         return $result;
 
