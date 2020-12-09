@@ -114,7 +114,7 @@ $row = mysqli_fetch_assoc($read_login_current);
                     <div class="row d-flex justify-content-center">
                         <div class="col-md-6 ">
 
-                        <form method="POST" action="functions/update_available_slot.php" class="parking-slot-form">
+                        <form method="post" action="functions/update_available_slot.php" class="parking-slot-form">
                     <h4>Add Available Parking Slots</h5><br>
                         <div class="form-group">
                            <i class="fa fa-road"></i> <label for="Username">Total Available Parking Slots:</label>
