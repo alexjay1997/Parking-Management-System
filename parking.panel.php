@@ -34,10 +34,11 @@ $row = mysqli_fetch_assoc($read_login_current);
 <?php
 
 if(isset($_POST['Submit_btn'])){
-  $hostname = "us-cdbr-east-02.cleardb.com";
-  $dbusername = "b749a6c04fe595";
-$dbpassword = "1e7cf907";
-$database = "heroku_f4bacc0811464cd";
+  
+  $hostname = 'us-cdbr-east-02.cleardb.com';
+  $dbusername = 'b749a6c04fe595';
+$dbpassword = '1e7cf907';
+$database = 'heroku_f4bacc0811464cd';
 
 
 $conn = new mysqli($hostname, $dbusername, $dbpassword, $database);
@@ -135,7 +136,7 @@ else{
                     <div class="row d-flex justify-content-center">
                    
                         <!--form -->
-                        <form method="POST" action="parking.panel.php" class="text-center">
+                        <form method="POST" action="" class="text-center">
                      
 
 
