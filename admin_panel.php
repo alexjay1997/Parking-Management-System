@@ -7,7 +7,7 @@ if(isset($_SESSION['id']) && $_SESSION['id']== true){
 }
 else{
 
-header('location:login.php');
+//header('location:login.php');
 }
 
 
