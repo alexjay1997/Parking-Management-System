@@ -33,10 +33,9 @@ $row = mysqli_fetch_assoc($read_login_current);
 ?>
 <?php
 
-if(isset($_POST['Submit_btn'])){
   
-  $hostname = 'us-cdbr-east-02.cleardb.com';
-  $dbusername = 'b749a6c04fe595';
+$hostname = 'us-cdbr-east-02.cleardb.com';
+$dbusername = 'b749a6c04fe595';
 $dbpassword = '1e7cf907';
 $database = 'heroku_f4bacc0811464cd';
 
@@ -44,12 +43,15 @@ $database = 'heroku_f4bacc0811464cd';
 $conn = new mysqli($hostname, $dbusername, $dbpassword, $database);
 
 
+if(isset($_POST['Submit_btn'])){
+
+
 $vehicle =$_POST['vehicle'];
 $price = $_POST['price'];
 
 $sql = "Insert into tbl_parking_entry (vehicle, price) values ('$vehicle','$price')";
-$result =mysqli_query($conn,$sql);
-if($result == true){
+$result = mysqli_query($sql,$conn);
+if($result){
 echo "success insert"
 }
 else{
