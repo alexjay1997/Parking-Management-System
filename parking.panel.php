@@ -139,7 +139,7 @@ else{
                     <div class="row d-flex justify-content-center">
                    
                         <!--form -->
-                        <form method="POST" action="parking.panel" class="text-center">
+                        <form method="post" action="parking.panel.php" class="text-center">
                      
 
 
