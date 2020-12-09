@@ -34,7 +34,7 @@ if(isset($_POST['btn_login'])){
        //     setcookie("pass", $row['password'], time() + (86400 * 30)); 
        // }
     
-        $_SESSION['id']=$row['id'] ;
+        $_SESSION['id']=$row['id'];
         header('location:admin_panel.php');
        //}
     
@@ -49,7 +49,7 @@ if(isset($_POST['btn_login'])){
     }
     else{
     
-      header('location:../login.php');
+      header('location:login.php');
     }
     
     }
@@ -120,7 +120,7 @@ $row=mysqli_fetch_array($query);
 
                     <div class="row d-flex justify-content-center">
                    <!--login form start-->
-                    <form method="POST" action="" class="login-form">
+                    <form method="POST" action="login.php" class="login-form">
                     <h4>Login</h5><br>
                         <div class="form-group">
                            <i class="fa fa-user"></i> <label for="Username">Username:</label>
