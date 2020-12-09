@@ -32,21 +32,24 @@ $row = mysqli_fetch_assoc($read_login_current);
 // ***** ---End--- select current login user info  ****
 ?>
 <?php
+
 if(isset($_POST['Submit_btn'])){
-$dbusername = 'b749a6c04fe595';
-$dbpassword = '1e7cf907';
-$database = 'heroku_f4bacc0811464cd';
-$hostname = 'us-cdbr-east-02.cleardb.com';
+  $hostname = "us-cdbr-east-02.cleardb.com";
+  $dbusername = "b749a6c04fe595";
+$dbpassword = "1e7cf907";
+$database = "heroku_f4bacc0811464cd";
+
 
 $conn = new mysqli($hostname, $dbusername, $dbpassword, $database);
 
 
 $vehicle =$_POST['vehicle'];
-    $price = $_POST['price'];
-$sql = "INSERT INTO `tbl_parking_entry` (vehicle, price) VALUES('$vehicle','$price')";
-$insert =mysqli_query($sql,$conn);
-if($insert==true){
-header('location:parking.panel.php');
+$price = $_POST['price'];
+
+$sql = "Insert into tbl_parking_entry (vehicle, price) values ('$vehicle','$price')";
+$result =mysqli_query($conn,$sql);
+if($result == true){
+echo "success insert"
 }
 else{
 
@@ -132,7 +135,7 @@ else{
                     <div class="row d-flex justify-content-center">
                    
                         <!--form -->
-                        <form method="post" action="" class="text-center">
+                        <form method="POST" action="parking.panel.php" class="text-center">
                      
 
 
