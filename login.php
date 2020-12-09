@@ -24,7 +24,7 @@ if(isset($_POST['btn_login'])){
     
      $query=mysqli_query($conn,"select * from tbl_users where username='$username' && password='$Encrypt_password'");
     
-    if($query->num_rows>0){
+    if(mysqli_num_rows($query)>0){
       $row =mysqli_fetch_array($query);
         
         //if($row['role']=="admin"){
