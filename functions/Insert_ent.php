@@ -3,7 +3,7 @@
  include_once '../includes/Select.class.php';
  include_once '../includes/update.slots.php';
 
-if(isset($_POST['Submit_btn'])){
+if(isset($_POST['Submit-btn'])){
 
     //--- Start--- select all of parking entries  
    
