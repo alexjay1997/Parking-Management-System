@@ -109,7 +109,7 @@ $row = mysqli_fetch_assoc($read_login_current);
                     <div class="row d-flex justify-content-center">
                    
                         <!--form -->
-                        <form method="post" action="./functions/add.entry.php" class="text-center">
+                        <form method="post" action="functions/add_new_entry_parking.func.php" class="text-center">
                      
 
 
@@ -128,7 +128,7 @@ $row = mysqli_fetch_assoc($read_login_current);
                         <br>
                         <label>Price</label><br>
                        <input  readonly type="text" class="form-control" id="price" name="price" oninput="ifchange_price()"><br>
-                        <input type="submit" class="btn btn-success btn-m " name="Submit-btn" value="Submit" ><!--<i class="fa fa-print"></i>-->
+                        <input type="submit" class="btn btn-success btn-m " name="btn-add-entry" value="Submit" ><!--<i class="fa fa-print"></i>-->
                         </form>
                        
 
