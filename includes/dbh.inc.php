@@ -19,12 +19,12 @@
   
     protected function db_connection()
     {
-       //$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+       $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
         
-        $this->db_host ="us-cdbr-east-02.cleardb.com";
-        $this->db_username ="b749a6c04fe595";
-        $this->db_password ="1e7cf907";
-        $this->db_name ="heroku_f4bacc0811464cd";
+        $this->db_host =$url["host"];
+        $this->db_username =$url["user"];
+        $this->db_password =$url["pass"];
+        $this->db_name =substr($url["path"],1);
 
      
         $this->connection = new mysqli($this->db_host,$this->db_username,$this->db_password,$this->db_name);
