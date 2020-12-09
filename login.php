@@ -22,9 +22,10 @@ if(isset($_POST['btn_login'])){
     $password = mysqli_real_escape_string($_POST['password']);
     $Encrypt_password = $password;
     
-     $query=mysqli_query($conn,"select * from tbl_users where username='$username' && password='$Encrypt_password'");
+     $query=mysqli_query($conn,"select * from `tbl_users` where username='$username' && password='$Encrypt_password'");
     
-    if(mysqli_num_rows($query)>0){
+    if(mysqli_num_rows($query) == 1){
+
       $row =mysqli_fetch_array($query);
         
         //if($row['role']=="admin"){
@@ -120,7 +121,7 @@ $row=mysqli_fetch_array($query);
 
                     <div class="row d-flex justify-content-center">
                    <!--login form start-->
-                    <form method="POST" action="" class="login-form">
+                    <form method="POST" action="login.php" class="login-form">
                     <h4>Login</h5><br>
                         <div class="form-group">
                            <i class="fa fa-user"></i> <label for="Username">Username:</label>
