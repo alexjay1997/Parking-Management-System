@@ -21,8 +21,8 @@ if(isset($_POST['btn-add-entry'])){
  
  // -- Start  variable for insert and function --
 
-    $vehicles =$_POST['vehicle'];
-    $prices = $_POST['price'];
+    $vehicles =$_POST['inp_vehicle'];
+    $prices = $_POST['inp_price'];
 
 
  
@@ -52,7 +52,7 @@ if(isset($_POST['btn-add-entry'])){
  
    
  
-      else if($available_slots ==0){
+      else if($available_slots == 0){
     
             echo "sorry no more available parking area!";
         }
@@ -61,7 +61,7 @@ if(isset($_POST['btn-add-entry'])){
 else{
    
     $conn_add_entry =  new Insert_class();
-    $insert_entry = $conn_add_entry->add_parking_entry($vehicles,$prices);
+    $insert_entry = $conn_add_entry->ad_ParkingEntry($vehicles,$prices);
     // End
 
    

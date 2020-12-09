@@ -109,11 +109,11 @@ $row = mysqli_fetch_assoc($read_login_current);
                     <div class="row d-flex justify-content-center">
                    
                         <!--form -->
-                        <form method="POST" action="functions/add_entry.func.php" class="text-center">
+                        <form method="POST" action="functions/add.func.entry.php" class="text-center">
                      
 
 
-                        <select id="cars" class="form-control" name="vehicle" onchange="ChooseType();" >
+                        <select id="cars" class="form-control" name="inp_vehicle" onchange="ChooseType();" >
                         <option selected disabled>Select Vehicle Type </option>
                         <?php
                             include_once 'includes/Select.class.php';
@@ -127,7 +127,7 @@ $row = mysqli_fetch_assoc($read_login_current);
                       
                         <br>
                         <label>Price</label><br>
-                       <input  readonly type="text" class="form-control" id="price" name="price" oninput="ifchange_price()"><br>
+                       <input  readonly type="text" class="form-control" id="price" name="inp_price" oninput="ifchange_price()"><br>
                         <input type="submit" class="btn btn-success btn-m " name="btn-add-entry" value="Submit" ><!--<i class="fa fa-print"></i>-->
                         </form>
                        
