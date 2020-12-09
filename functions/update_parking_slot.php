@@ -10,7 +10,12 @@ $total_slots =mysqli_real_escape_string($conn_update_parking_slots->connection,$
 $update_total_parking_slot = $conn_update_parking_slots->update_parking_slots($total_slots);
 
 if($update_total_parking_slot){
-header('location:../admin_panel.php');
+header('location:../../admin_panel.php');
+}
+
+else{
+    header('location:../../admin_panel.php');
+
 }
 }
 
