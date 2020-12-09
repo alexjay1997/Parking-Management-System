@@ -1,5 +1,5 @@
 <?php
-include 'dbh.inc.php';;
+include 'dbh.inc.php';
 class Insert_class extends Database{
 
     public function __construct()
