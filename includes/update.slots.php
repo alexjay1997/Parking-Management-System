@@ -1,5 +1,5 @@
 <?php
-include 'dbh.inc.php';
+include_once 'dbh.inc.php';
 class Update_class extends Database{
 
     public function __construct()
