@@ -1,5 +1,5 @@
 <?php
-include_once 'dbh.inc.php';;
+include 'dbh.inc.php';;
 class Insert_class extends Database{
 
     public function __construct()
@@ -17,7 +17,7 @@ class Insert_class extends Database{
 
     public function update_parking_slots($total_slots){
 
-        $query_update_parking_slots="Update tbl_parking_slots Set total_parking_slots='$total_slots' where id==1 ";
+        $query_update_parking_slots="Update tbl_parking_slots SET total_parking_slots='$total_slots' where id=1 ";
         $result=mysqli_query($this->connection,$query_update_parking_slots);
         return $result;
 
@@ -25,7 +25,7 @@ class Insert_class extends Database{
 
     public function update_available_slots($available_slots){
 
-        $query_update_available_slots="Update tbl_parking_slots Set available_slots='$available_slots' where id==1 ";
+        $query_update_available_slots="Update tbl_parking_slots Set available_slots='$available_slots' where id=1 ";
         $result=mysqli_query($this->connection,$query_update_available_slots);
         return $result;
 
