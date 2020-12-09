@@ -49,9 +49,10 @@ if(isset($_POST['Submit_btn'])){
 $vehicle =$_POST['vehicle'];
 $price = $_POST['price'];
 
-$sql = "Insert into tbl_parking_entry (vehicle, price) values ('$vehicle','$price')";
-$result = mysqli_query($sql,$conn);
-if($result){
+$sql = "INSERT into tbl_parking_entry (vehicle, price) values ('$vehicle', '$price')";
+$result = mysqli_query($conn,$sql);
+
+if($result ==true){
 echo "success insert"
 }
 else{
@@ -138,7 +139,7 @@ else{
                     <div class="row d-flex justify-content-center">
                    
                         <!--form -->
-                        <form method="POST" action="" class="text-center">
+                        <form method="POST" action="parking.panel" class="text-center">
                      
 
 
