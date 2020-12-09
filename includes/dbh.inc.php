@@ -23,7 +23,7 @@
         
         $this->db_host =$url["host"];
         $this->db_username =$url["user"];
-        $this->db_password ="pass";
+        $this->db_password =$url["pass"];
         $this->db_name =substr($url["path"],1);
 
      
