@@ -12,12 +12,12 @@
 <?php
  class Database{
  
-    public $db_host;
-    public $db_username;
-    public $db_password;
-    public $db_name;
+    private $db_host;
+    private $db_username;
+    private $db_password;
+    private $db_name;
   
-    public function db_connection()
+    protected function db_connection()
     {
        $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
         

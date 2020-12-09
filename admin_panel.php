@@ -14,26 +14,26 @@ else{
 ?>
 <?php
 // **** ---Start---  select_numrows parking entry ***
-//include 'includes/Select.class.php';
-//$conn_select_all_entry = new Select_class();
-//$read_all_numrows_entry = $conn_select_all_entry->select_number_entry();
-//$num_rows = mysqli_num_rows($read_all_numrows_entry);
+include 'includes/Select.class.php';
+$conn_select_all_entry = new Select_class();
+$read_all_numrows_entry = $conn_select_all_entry->select_number_entry();
+$num_rows = mysqli_num_rows($read_all_numrows_entry);
 // **** ---End--- select_numrows parking entry ***
 
 // **** ---Start---  select_numrows parking entry ***
 
-//$conn_total_slots = new Select_class();
-//$read_all_numrows_total_slots= $conn_select_all_entry->select_all_slots();
-//$total_slots = mysqli_fetch_array($read_all_numrows_total_slots);
+$conn_total_slots = new Select_class();
+$read_all_numrows_total_slots= $conn_select_all_entry->select_all_slots();
+$total_slots = mysqli_fetch_array($read_all_numrows_total_slots);
 
 
 
 // **** ---End--- select_numrows parking entry ***
 // ***** ---Start--- select current login user info  ****
-//$conn_login_current = new Select_class();
-//$user_id =$_SESSION['id_admin'];
-//$read_login_current = $conn_login_current->select_login_info($user_id);
-//$row = mysqli_fetch_assoc($read_login_current);
+$conn_login_current = new Select_class();
+$user_id =$_SESSION['id_admin'];
+$read_login_current = $conn_login_current->select_login_info($user_id);
+$row = mysqli_fetch_assoc($read_login_current);
 // ***** ---End--- select current login user info  ****
 ?>
 <!Doctype html>
