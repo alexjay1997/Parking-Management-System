@@ -22,28 +22,28 @@ if(isset($_POST['btn-add-entry'])){
  
  // -- Start  variable for insert and function --
 
-    $vehicles =$_POST['inp_vehicle'];
-    $prices = $_POST['inp_price'];
+    $vehicle =$_POST['inp_vehicle'];
+    $price = $_POST['inp_price'];
 
 
  
 
    
     // -- check first if price is same with the system or hack if it is hack or change in inspect element then alert error message //
-    if($vehicles == "Van" && $prices !="30.00" ){
+    if($vehicle == "Van" && $price !="30.00" ){
 
         echo "<script>alert('error price!');</script>";
         echo "<script>window.location.href='../parking.panel.php';</script>";
       
     }
     
-    else if($vehicles == "Car" && $prices !="25.00" ){
+    else if($vehicle == "Car" && $price !="25.00" ){
         echo "<script>alert('error price!');</script>";
         echo "<script>window.location.href='../parking.panel.php';</script>";
        
     }
     
-    else if($vehicles == "Motor" && $prices !="15.00" ){
+    else if($vehicle == "Motor" && $price !="15.00" ){
     
         echo "<script>alert('error price!');</script>";
         echo "<script>window.location.href='../parking.panel.php';</script>";
@@ -63,7 +63,7 @@ else{
    
     $conn_add_entry =  new Insert_class();
 
-    $insert_entry = $conn_add_entry->addEntryParking($vehicles,$prices);
+    $insert_entry = $conn_add_entry->addEntryParking($vehicle,$price);
     // End
 
    
