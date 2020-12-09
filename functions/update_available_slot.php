@@ -1,5 +1,5 @@
 <?php
-include '../includes/insert.class.php';
+include '.././includes/insert.class.php';
 
 $conn_update_parking_slots = new Insert_class();
 
