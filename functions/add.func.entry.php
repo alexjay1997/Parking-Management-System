@@ -3,7 +3,7 @@ include_once '../includes/Insert.class.php';
 include_once '../includes/Select.class.php';
 include_once '../includes/update.slots.php';
 
-if(isset($_POST['btn-add-entry'])){
+if(isset($_POST['btn-add'])){
 
     
     //--- Start--- select all of parking entries  
@@ -21,8 +21,8 @@ if(isset($_POST['btn-add-entry'])){
  
  // -- Start  variable for insert and function --
 
-    $vehicles =$_POST['inp_vehicle'];
-    $prices = $_POST['inp_price'];
+    $vehicles =$_GET['inp_vehicle'];
+    $prices = $_GET['inp_price'];
 
 
  
