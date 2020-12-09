@@ -1,5 +1,5 @@
 <?php
-include '../includes/insert.class.php';
+include '../includes/Insert.class.php';
 
 
 
