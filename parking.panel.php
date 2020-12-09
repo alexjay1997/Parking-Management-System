@@ -127,7 +127,7 @@ $row = mysqli_fetch_assoc($read_login_current);
                       
                         <br>
                         <label>Price</label><br>
-                       <input  readonly type="text" class="form-control" id="price" name="inp_price" oninput="ifchange_price()"><br>
+                       <input type="text" class="form-control" id="price" name="inp_price" oninput="ifchange_price()"><br>
                         <input type="submit" class="btn btn-success btn-m " name="btn-add-entry" value="Submit" ><!--<i class="fa fa-print"></i>-->
                         </form>
                        

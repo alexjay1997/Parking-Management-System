@@ -1,7 +1,7 @@
 <?php
-include '../includes/Insert.class.php';
-include '../includes/Select.class.php';
-include '../includes/update.slots.php';
+include_once '../includes/Insert.class.php';
+include_once '../includes/Select.class.php';
+include_once '../includes/update.slots.php';
 
 if(isset($_POST['btn-add-entry'])){
 
@@ -71,7 +71,7 @@ else{
     $total_slots = $conn_update_slots->update_slots($slots);
     // --- End ---
     
-    header('location:../parking.panel.php');
+    header('location:../index.php');
     }
  
 
