@@ -8,7 +8,13 @@ class Insert_class extends Database{
             $this->db_connection();
     }
 
-    
+    public function add_employee($fname,$lname,$username,$password,$email,$contact,$role){
+
+        $query = "Insert into tbl_users(firstname,lastname,username,password,email,contact,role) values ('$fname','$lname','$username','$password','$email','$contact','$role')";
+        $result=mysqli_query($this->connection,$query);
+        return $result;
+
+    }
 
 
     public function update_available_slots($available_slots){

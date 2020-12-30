@@ -60,6 +60,16 @@ public function select_all_slots(){
 
 }
 // ******* end ***********
+
+
+
+//select all employee
+
+public function select_all_employee(){
+    $query_all_employee = "Select * from tbl_users";
+    $result=mysqli_query($this->connection,$query_all_employee);
+    return $result;
+}
 }
 
 ?>

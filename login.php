@@ -41,7 +41,7 @@
 
                 <?php
                 
-                echo $row['username'];
+               // echo $row['username'];
                 ?>
 
                     <div class="row d-flex justify-content-center">
