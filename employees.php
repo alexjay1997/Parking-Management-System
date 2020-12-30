@@ -117,13 +117,13 @@ $row = mysqli_fetch_assoc($read_login_current);
                     <hr>
                     <br>
                     <div class="row d-flex justify-content-center">
-                        <a href="#" class="add-employee-box col-md-6 " data-toggle="modal" data-target="#myModal" style="text-decoration:none;color:white;background:forestgreen;" >
+                        <a href="#" class="add-employee-box col-md-6 " data-toggle="modal" data-target="#myModal" style="text-decoration:none;color:white;background:forestgreen;padding:40px;" >
                         <div >
                         <h1 class="fas fa-user">+ </h1>
                         <h4>Add employees</h4>
                         </div>
                         </a>
-                        <a href="view_employee.php" class="view-employee-box col-md-6" style="text-decoration:none;color:white;background:forestgreen;">
+                        <a href="view_employee.php" class="view-employee-box col-md-6" style="text-decoration:none;color:white;background:#2da2d8;padding:40px;">
                         <div >
                         <h1 class="fas fa-user"> </h1> &nbsp;<h6 class="fas fa-eye"> </h6>
                         <h4>View employees</h4>
